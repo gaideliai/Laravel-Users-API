@@ -18,14 +18,14 @@ class UserController extends Controller
         $request = Http::get(config('services.users.base_URL'));    
 
         if (0 === strpos($request->header('Content-Type'), 'application/json')) {
-            $users = $request->json(['results']);
+            $users = $request->json(['users']);
 
             $usersFormatted['users'] = [];
 
             foreach ($users as $user) {
                 array_push(
                     $usersFormatted['users'], 
-                    ['full_name' => $user['First_name'].' '.$user['last_name']]
+                    ['full_name' => $user['first_name'].' '.$user['last_name']]
                 );
             }
         }

@@ -33,5 +33,9 @@ return [
     'users' => [
         'base_URL' => env('USERS_BASE_URL'),
     ],
+
+    'api' => [
+        'api_key' => env('API_KEY')
+    ],
     
 ];
