@@ -16,7 +16,7 @@ class EnsureApiKeyIsValid
      */
     public function handle(Request $request, Closure $next)
     {
-        if ($request->query('api_key') !== config('services.api.api_key')) {
+        if ($request->header('X-API-Key') !== config('services.api.api_key')) {
             return response('Invalid API key: You must use a valid key.', 401);
         }
 
