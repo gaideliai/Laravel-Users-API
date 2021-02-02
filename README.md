@@ -9,17 +9,20 @@
 
 ## Users API
 
-This is a simple RESTful API with one endpoint.
+This is a simple RESTful API with one endpoint.\
 Accepts JSON user data, formats it and returns JSON response.
 
 ### Endpoint
-GET api/v1/users
+GET api/v1/users\
 Lists formatted user names.
 
 ### Request example
+```
 curl -H "X-API-Key:myapikey" -X GET "http://127.0.0.1:8000/api/v1/users"
+```
 
 ### Response example
+```
 {
     "users":[
         {
@@ -30,9 +33,10 @@ curl -H "X-API-Key:myapikey" -X GET "http://127.0.0.1:8000/api/v1/users"
         }
     ]
 }
+```
 
 ### Authorization requirements
-Authorization type: API Key
+Authorization type: API Key\
 Add to: Header "X-API-Key:myapikey"
 
 ### Configuration
